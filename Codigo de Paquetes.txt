@@ -1,0 +1,76 @@
+create or replace package body PKG_VACACIONES is
+
+FUNCTION "FNC_DIAS_DISPONIBLES_VACACION" (V_ID_PERSONAL NUMBER, V_ANIO_VACACION NUMBER)
+RETURN NUMBER
+AS
+BEGIN
+	DECLARE
+	V_CANTIDAD NUMBER DEFAULT 0;
+	V_ID_VACACION_PERSONAL NUMBER DEFAULT 0;
+	V_JER_COD NUMBER DEFAULT 0;
+	V_ANTIG NUMBER DEFAULT 0;
+	BEGIN
+		
+		select jer_cod, ANO_REAL 
+		into V_JER_COD, V_ANTIG
+		from V_PERSON1 V
+		where V.id_personal = V_ID_PERSONAL AND ROWNUM = 1;
+
+		select DIAS_PENDIENTES,ID_VACACION_PERSONAL --,MAX(ID_VACACION_PERSONAL)
+	    into V_CANTIDAD,V_ID_VACACION_PERSONAL
+        from VACACIONES_PERSONAL VP
+        where VP.ID_PERSONAL = V_ID_PERSONAL AND
+          VP.ANIO_VACACION = V_ANIO_VACACION AND
+          VP.ESTADO = 'A' AND ROWNUM = 1
+		ORDER BY ID_VACACION_PERSONAL DESC;
+        --GROUP BY DIAS_PENDIENTES;
+		
+    RETURN V_CANTIDAD;
+    
+    exception
+    when no_data_found  then
+        if (V_JER_COD !=9) THEN
+          V_CANTIDAD := 30;
+        else
+          if(V_ANTIG <=4) THEN       --Si es menor o igual a 4
+            V_CANTIDAD := 12;        --Cantidad de días de vacacion 12
+          elsif (V_ANTIG <=9) THEN   --Si es menor o igual a 9
+            V_CANTIDAD := 18;        --Cantidad de días de vacación 18
+          else                       --Si es mayor o igual a 10
+            V_CANTIDAD := 30;        --Cantidad de dias de vacación 30
+          end if;
+				end if;
+        RETURN V_CANTIDAD;
+	END;
+END;
+
+FUNCTION "FNC_DIAS_HABILES" (FECHA_INICIO IN DATE, FECHA_FIN IN DATE)
+RETURN NUMBER
+AS
+vacaciones number;
+numero_dias NUMBER := 0;
+fecha_actual DATE;
+BEGIN
+IF fecha_fin >= fecha_inicio THEN    
+  fecha_actual := fecha_inicio;
+  WHILE fecha_actual <= fecha_fin 
+	LOOP
+		IF TO_CHAR(fecha_actual,'DY') NOT IN ('SAT','SUN')
+			THEN numero_dias := numero_dias + 1;
+		END IF;
+		fecha_actual := fecha_actual + 1;
+  END LOOP;
+       
+  SELECT COUNT (F.FECHA_FERIADO)
+  INTO vacaciones
+  FROM FERIADOS F
+  WHERE F.FECHA_FERIADO BETWEEN fecha_inicio AND fecha_fin;
+    
+  RETURN numero_dias - vacaciones;
+ELSE
+ RETURN 0;    
+END IF;
+END;
+
+
+end PKG_VACACIONES;
