@@ -1,0 +1,39 @@
+
+
+***********************************************************************
+Fatal NI connect error 12541, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.15)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=siath)(INSTANCE_NAME=siath)(CID=(PROGRAM=E:\DevSuiteHome\bin\frmbld.exe)(HOST=VM-COLMAN)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
+  Time: 05-JUL-2021 11:46:34
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 61
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.15)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=siath)(INSTANCE_NAME=siath)(CID=(PROGRAM=E:\DevSuiteHome\bin\frmbld.exe)(HOST=VM-COLMAN)(USER=Administrador))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
+  Time: 05-JUL-2021 11:47:47
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 538
+    TNS-00538: Message 538 not found;  product=NETWORK; facility=TNS
+
+    nt secondary err code: 65
+    nt OS err code: 0
