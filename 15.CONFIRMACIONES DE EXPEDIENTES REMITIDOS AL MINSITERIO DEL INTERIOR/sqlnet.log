@@ -6,45 +6,7 @@ Fatal NI connect error 12170.
   VERSION INFORMATION:
 	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
 	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
-  Time: 24-AUG-2021 09:04:57
-  Tracing not turned on.
-  Tns error struct:
-    ns main err code: 12535
-    TNS-12535: TNS:operation timed out
-    ns secondary err code: 12560
-    nt main err code: 505
-    TNS-00505: Operation timed out
-    nt secondary err code: 60
-    nt OS err code: 0
-  Client address: <unknown>
-
-
-***********************************************************************
-Fatal NI connect error 12541, connecting to:
- (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.26.81)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=siath)(INSTANCE_NAME=siath)(CID=(PROGRAM=E:\DevSuiteHome\bin\frmbld.exe)(HOST=VM-COLMAN)(USER=Administrador))))
-
-  VERSION INFORMATION:
-	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
-	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
-  Time: 24-AUG-2021 12:58:20
-  Tracing not turned on.
-  Tns error struct:
-    ns main err code: 12541
-    TNS-12541: TNS:no listener
-    ns secondary err code: 12560
-    nt main err code: 511
-    TNS-00511: No listener
-    nt secondary err code: 61
-    nt OS err code: 0
-
-
-***********************************************************************
-Fatal NI connect error 12170.
-
-  VERSION INFORMATION:
-	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
-	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
-  Time: 10-FEB-2022 18:56:55
+  Time: 17-MAY-2022 19:23:26
   Tracing not turned on.
   Tns error struct:
     ns main err code: 12535
@@ -63,7 +25,7 @@ Fatal NI connect error 12170.
   VERSION INFORMATION:
 	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
 	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
-  Time: 27-APR-2022 19:33:22
+  Time: 26-MAY-2022 19:26:49
   Tracing not turned on.
   Tns error struct:
     ns main err code: 12535
@@ -82,7 +44,7 @@ Fatal NI connect error 12170.
   VERSION INFORMATION:
 	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
 	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
-  Time: 09-MAY-2022 19:15:54
+  Time: 12-JUL-2022 19:06:45
   Tracing not turned on.
   Tns error struct:
     ns main err code: 12535
@@ -101,26 +63,7 @@ Fatal NI connect error 12170.
   VERSION INFORMATION:
 	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
 	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
-  Time: 09-MAY-2022 19:16:38
-  Tracing not turned on.
-  Tns error struct:
-    ns main err code: 12535
-    TNS-12535: TNS:operation timed out
-    ns secondary err code: 12560
-    nt main err code: 505
-    TNS-00505: Operation timed out
-    nt secondary err code: 60
-    nt OS err code: 0
-  Client address: <unknown>
-
-
-***********************************************************************
-Fatal NI connect error 12170.
-
-  VERSION INFORMATION:
-	TNS for 32-bit Windows: Version 10.1.0.4.0 - Production
-	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.4.0 - Production
-  Time: 27-JUN-2022 16:14:46
+  Time: 20-JUL-2022 19:06:29
   Tracing not turned on.
   Tns error struct:
     ns main err code: 12535
